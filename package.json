@@ -1,0 +1,30 @@
+{
+  "name": "game",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browserify": "~2.36.0",
+    "envify": "~1.2.0",
+    "reactify": "~0.4.0",
+    "statics": "~0.1.0",
+    "uglify-js": "~2.4.13",
+    "watchify": "~0.4.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "scripts": {
+    "start": "watchify -o dist/bundle.js -v -d src"
+  }
+}
